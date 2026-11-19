@@ -1,0 +1,22 @@
+# Minimal Supabase CLI config for local/linked projects.
+# Apply migrations with: npx supabase db push
+# Or: npx supabase start && npx supabase db reset
+
+project_id = "wildwood-studio"
+
+[api]
+enabled = true
+port = 54321
+
+[db]
+port = 54322
+major_version = 15
+
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:3000/auth/callback"]
+
+[auth.email]
+enable_signup = true
+enable_confirmations = false
